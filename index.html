@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ВолПечи — банные печи из стали 6–8 мм. Производство в Вологде</title>
 <meta name="description" content="Банные печи из стали 6 и 8 мм, баки из нержавейки и дымоходы. Собственное производство в Вологде, более 15 лет. 218 отзывов на Авито, рейтинг 5,0. Доставка по России.">
+<meta property="og:title" content="ВолПечи — банные печи из стали 6–8 мм">
+<meta property="og:description" content="Собственное производство в Вологде. 218 отзывов на Авито, рейтинг 5,0.">
+<meta property="og:image" content="https://evgenynikolaev35-blip.github.io/volpechi-site/img/og.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -45,7 +49,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(14,13,12,.86);backdrop-f
 .logo span{color:var(--ember)}
 .menu{display:flex;gap:30px;font-size:15px;color:var(--muted)}
 .menu a:hover{color:var(--text)}
-.nav .btn{padding:11px 20px;font-size:14px}
+.nav .btn{padding:11px 18px;font-size:14px;white-space:nowrap}
 
 /* hero */
 .hero{padding:72px 0 88px;position:relative;overflow:hidden}
@@ -53,7 +57,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(14,13,12,.86);backdrop-f
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
 .hero-photo{position:relative;border-radius:240px 240px 4px 4px;overflow:hidden;aspect-ratio:3/4;border:1px solid var(--line)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;filter:contrast(1.08) saturate(.8) brightness(.9)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
 .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,13,12,.05) 40%,rgba(14,13,12,.75))}
 .badge{position:absolute;left:20px;bottom:20px;z-index:2;background:rgba(14,13,12,.82);border:1px solid var(--line);padding:14px 18px;border-radius:2px;backdrop-filter:blur(6px)}
 .badge b{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--ember2)}
@@ -63,6 +67,32 @@ header{position:sticky;top:0;z-index:20;background:rgba(14,13,12,.86);backdrop-f
 .stat+.stat{padding-left:28px;border-left:1px solid var(--line)}
 .stat b{display:block;font-family:var(--serif);font-size:40px;font-weight:500;line-height:1}
 .stat span{color:var(--muted);font-size:14px;display:block;margin-top:8px}
+
+/* atmosphere band */
+.band{padding:0;position:relative;min-height:min(78vh,720px);display:flex;align-items:flex-end;overflow:hidden;border-top:1px solid var(--line)}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 55%}
+.band:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,13,12,.92) 0%,rgba(14,13,12,.6) 38%,rgba(14,13,12,0) 68%),linear-gradient(0deg,rgba(14,13,12,.75),rgba(14,13,12,0) 45%)}
+.band .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:64px}
+.band h2{font-size:clamp(40px,6vw,84px);max-width:9em}
+.band .lead{color:#d8d0c4}
+.viz{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.band .viz{position:absolute;right:24px;bottom:18px;z-index:2}
+/* scheme */
+.scheme{margin:56px 0 0;border:1px solid var(--line);background:#0b0a09}
+.scheme img{width:100%}
+.scheme figcaption{padding:16px 22px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* interiors */
+.rooms{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:48px}
+.room{position:relative;overflow:hidden;border:1px solid var(--line);margin:0}
+.room img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.room:hover img{transform:scale(1.04)}
+.room figcaption{position:absolute;left:0;right:0;bottom:0;padding:70px 26px 24px;background:linear-gradient(0deg,rgba(14,13,12,.88),rgba(14,13,12,0))}
+.room figcaption b{font-family:var(--serif);font-weight:500;font-size:24px;display:block}
+.room figcaption span{color:#d8d0c4;font-size:15px}
+.room.tall{aspect-ratio:auto}
+.rooms-note{margin-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.rooms-note a{color:var(--ember2);text-decoration:underline;text-underline-offset:3px}
+@media(prefers-reduced-motion:reduce){.room img,.model .ph img{transition:none}}
 
 /* steel */
 .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -181,6 +211,10 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
   .result{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:32px}
   .picker{padding:28px 22px}
   .steps{grid-template-columns:1fr 1fr}
+  .rooms{grid-template-columns:1fr}
+  .room{aspect-ratio:4/3}
+  .band{min-height:560px}
+  .band:before{background:linear-gradient(0deg,rgba(14,13,12,.95) 0%,rgba(14,13,12,.55) 55%,rgba(14,13,12,.15))}
   .ways{grid-template-columns:1fr}
   .kit-item{grid-template-columns:36px 1fr}
   .kit-item em{grid-column:2}
@@ -194,6 +228,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
     <a href="#top" class="logo" aria-label="ВолПечи"><svg class="mark" viewBox="-3 -3 74 98" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="5"><path d="M0 92V46h34V14h34v78M0 92h68"/><path d="M45 14V0h12v14M39 6h24"/></g><rect x="9" y="58" width="16" height="20" fill="var(--ember)"/></svg><b>Вол<span>Печи</span></b></a>
     <nav class="menu">
       <a href="#models">Печи</a>
+      <a href="#rooms">В интерьере</a>
       <a href="#kit">Комплект</a>
       <a href="#reviews">Отзывы</a>
       <a href="#delivery">Доставка</a>
@@ -219,7 +254,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
         </div>
       </div>
       <div class="hero-photo">
-        <img src="img/p02.jpg" alt="Банная печь ВолПечи с баком из нержавеющей стали">
+        <img src="img/ad-hero.jpg" alt="Банная печь ВолПечи с баком из нержавеющей стали в парной">
         <div class="badge"><b>5,0</b> ★★★★★<small>рейтинг на Авито · 218 отзывов</small></div>
       </div>
     </div>
@@ -230,6 +265,17 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
       <div class="stat"><b>от 14 600 ₽</b><span>цена производителя, без магазинной наценки</span></div>
     </div>
   </div>
+</section>
+
+<section class="band">
+  <img src="img/ad-stone.jpg" alt="Чёрная стальная печь ВолПечи в парной с каменной стеной">
+  <div class="wrap">
+    <div class="eyebrow">Сделано в Вологде</div>
+    <h2>Сила стали.<br><em>Тепло бани.</em></h2>
+    <p class="lead">Простая сварная печь из толстого листа. Без кожухов и украшений — только металл, который держит жар.</p>
+    <div class="hero-cta"><a href="#models" class="btn btn-primary">Смотреть печи</a></div>
+  </div>
+  <span class="viz">Визуализация установки</span>
 </section>
 
 <section class="alt">
@@ -244,6 +290,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
       <div class="feat"><div class="num">2 типа</div><h3>Каменка открытая или закрытая</h3><p>Открытая быстро прогревает парную, закрытая даёт мягкий лёгкий пар. Скажите, как любите париться.</p></div>
       <div class="feat"><div class="num">1 цех</div><h3>Делаем сами</h3><p>Печи, баки из нержавейки и дымоходы изготавливаем в Вологде, поэтому отвечаем за каждый шов.</p></div>
     </div>
+    <figure class="scheme"><img src="img/ad-scheme.jpg" alt="Схема печи ВолПечи: крышка бака, бак из нержавейки, корпус из стали 6 или 8 мм, выдвижной зольник, шибер-задвижка, сварные соединения" loading="lazy"><figcaption><span>Из чего состоит печь: бак, корпус, зольник, шибер и сварной шов крупным планом.</span><span class="viz">Концептуальная схема</span></figcaption></figure>
   </div>
 </section>
 
@@ -286,7 +333,21 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
   </div>
 </section>
 
-<section id="kit" class="alt">
+<section id="rooms" class="alt">
+  <div class="wrap">
+    <div class="head-row">
+      <div><div class="eyebrow">В интерьере</div><h2>Как печь смотрится в бане</h2></div>
+      <p class="lead" style="margin:0;max-width:420px">Чёрная сталь хорошо сочетается с деревом и камнем — и в рубленой бане, и в современной парной.</p>
+    </div>
+    <div class="rooms">
+      <figure class="room"><img src="img/ad-north.jpg" alt="Печь ВолПечи с длинной топкой в рубленой бане" loading="lazy"><figcaption><b>Рубленая баня</b><span>Печь с топкой 100 см на каменном подиуме</span></figcaption></figure>
+      <figure class="room"><img src="img/ad-cedar.jpg" style="object-position:88% 50%" alt="Печь ВолПечи с баком из нержавейки в парной из кедра" loading="lazy"><figcaption><b>Парная из кедра</b><span>Печь с баком из нержавейки</span></figcaption></figure>
+    </div>
+    <div class="rooms-note"><span class="viz">Визуализации установки. Реальные фото печей — в каталоге выше.</span><a href="https://www.avito.ru/brands/4dd8faaad39a2f3b54eadd92639623fd" target="_blank" rel="noopener">Больше фото на Авито ↗</a></div>
+  </div>
+</section>
+
+<section id="kit">
   <div class="wrap kit">
     <div class="kit-photo"><img src="img/p17.jpg" alt="Комплект: печь, бак из нержавейки, дымоход и проходы"></div>
     <div>
@@ -303,7 +364,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
   </div>
 </section>
 
-<section id="picker">
+<section id="picker" class="alt">
   <div class="wrap">
     <div class="eyebrow">Подбор</div>
     <h2>Какая печь нужна вашей бане</h2>
@@ -325,7 +386,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
   </div>
 </section>
 
-<section id="reviews" class="alt">
+<section id="reviews">
   <div class="wrap">
     <div class="eyebrow">Отзывы покупателей</div>
     <h2>218 реальных отзывов на Авито.<br>Из них 215 — пятёрки</h2>
@@ -361,7 +422,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
   </div>
 </section>
 
-<section id="delivery">
+<section id="delivery" class="alt">
   <div class="wrap del">
     <div>
       <div class="eyebrow">Доставка</div>
@@ -390,7 +451,7 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:2
   </div>
 </section>
 
-<section id="faq" class="alt">
+<section id="faq">
   <div class="wrap">
     <div style="text-align:center"><div class="eyebrow">Частые вопросы</div><h2>Коротко о главном</h2></div>
     <div class="faq">
